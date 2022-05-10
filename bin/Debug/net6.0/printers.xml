@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Tue May 10 21:47:04 2022 as: nmap -p 9100,515,631 -oX printers.xml 192.168.1.1/24 -->
+<nmaprun scanner="nmap" args="nmap -p 9100,515,631 -oX printers.xml 192.168.1.1/24" start="1652201224" startstr="Tue May 10 21:47:04 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="515,631,9100"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="Ping Scan" time="1652201224" percent="0.05"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.1.85" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1652201229" endtime="1652201230"><status state="up" reason="echo-reply" reason_ttl="246"/>
+<address addr="192.168.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="515"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="printer" method="table" conf="3"/></port>
+<port protocol="tcp" portid="631"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9100"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="jetdirect" method="table" conf="3"/></port>
+</ports>
+<times srtt="22000" rttvar="22000" to="110000"/>
+</host>
+<host starttime="1652201229" endtime="1652201229"><status state="up" reason="echo-reply" reason_ttl="245"/>
+<address addr="192.168.1.85" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="515"><state state="closed" reason="reset" reason_ttl="246"/><service name="printer" method="table" conf="3"/></port>
+<port protocol="tcp" portid="631"><state state="closed" reason="reset" reason_ttl="246"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9100"><state state="closed" reason="reset" reason_ttl="245"/><service name="jetdirect" method="table" conf="3"/></port>
+</ports>
+<times srtt="33835" rttvar="10558" to="100000"/>
+</host>
+<runstats><finished time="1652201230" timestr="Tue May 10 21:47:10 2022" summary="Nmap done at Tue May 10 21:47:10 2022; 256 IP addresses (2 hosts up) scanned in 6.58 seconds" elapsed="6.58" exit="success"/><hosts up="2" down="254" total="256"/>
+</runstats>
+</nmaprun>
